@@ -1,25 +1,167 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WMH-dE-KaN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Bosox Revised .ttf">
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+        </mutableArray>
+        <mutableArray key="Bosox SemiBold.ttf">
+            <string>BosoxSemiBold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Resuts DisplayVC-->
+        <scene sceneID="SbH-cA-34l">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WMH-dE-KaN" customClass="ResutsDisplayVC" customModule="SportExpenseLog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gE5-rf-Wck"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ZR-r8-4Z4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="EkQ-uf-8gI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BADGER TRACKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="esT-9c-jnm">
+                                <rect key="frame" x="20" y="30" width="560" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="BosoxSemiBold" family="Bosox SemiBold" pointSize="53"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-4z-C2T">
+                                <rect key="frame" x="10" y="88" width="580" height="497"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bGa-xg-gL4">
+                                        <rect key="frame" x="150" y="0.0" width="280" height="281"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1i-aV-rSm">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="281"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="i1i-aV-rSm" secondAttribute="height" multiplier="250:251" id="T0F-wl-tTt"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="BadgerLogo"/>
+                                                <connections>
+                                                    <segue destination="gl7-dO-e1X" kind="presentation" identifier="segueToCompletedEntries" id="BMz-3J-Fxd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MeU-eJ-ROg" userLabel="GamesAttended Stack View">
+                                        <rect key="frame" x="151" y="291" width="278" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Attended:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edb-xT-7rJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="278" height="24"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; Games Holder &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-YT-PWZ">
+                                                <rect key="frame" x="0.0" y="28" width="278" height="34"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.82076162679999998" green="0.84906600340000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="43"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-cg-s8Y" userLabel="KmDriven Stack View">
+                                        <rect key="frame" x="176" y="363" width="229" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km Driven:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-U6-baG">
+                                                <rect key="frame" x="0.0" y="0.0" width="229" height="24"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; km Holder &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVw-RX-TZx">
+                                                <rect key="frame" x="0.0" y="28" width="229" height="34"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="1" green="0.7313079833984375" blue="0.76182723045349121" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="43"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-uT-Tgf" userLabel="MoneySpent Stack View">
+                                        <rect key="frame" x="181" y="435" width="219" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Spent:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efl-un-qF0">
+                                                <rect key="frame" x="0.0" y="0.0" width="219" height="24"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; $$ Holder &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-2g-b7V">
+                                                <rect key="frame" x="0.0" y="28" width="219" height="34"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.7996220007" green="0.94241669770000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="43"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" cyan="0.25850118001302086" magenta="1" yellow="0.79712609847386673" black="0.001007080078125" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="esT-9c-jnm" firstAttribute="leading" secondItem="EkQ-uf-8gI" secondAttribute="leadingMargin" id="Kin-JC-5g7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="esT-9c-jnm" secondAttribute="trailing" id="Wjc-Ya-CpC"/>
+                            <constraint firstItem="9I2-4z-C2T" firstAttribute="leading" secondItem="EkQ-uf-8gI" secondAttribute="leading" constant="10" id="Z12-fM-miK"/>
+                            <constraint firstItem="9I2-4z-C2T" firstAttribute="centerX" secondItem="EkQ-uf-8gI" secondAttribute="centerX" id="Z7x-Gj-G5G"/>
+                            <constraint firstItem="7ZR-r8-4Z4" firstAttribute="top" secondItem="9I2-4z-C2T" secondAttribute="bottom" constant="15" id="dqm-OP-BTv"/>
+                            <constraint firstItem="esT-9c-jnm" firstAttribute="top" secondItem="gE5-rf-Wck" secondAttribute="bottom" constant="10" id="hJk-AX-SzA"/>
+                            <constraint firstItem="9I2-4z-C2T" firstAttribute="top" secondItem="esT-9c-jnm" secondAttribute="bottom" constant="5" id="mFJ-9N-bMm"/>
+                            <constraint firstAttribute="trailing" secondItem="9I2-4z-C2T" secondAttribute="trailing" constant="10" id="ouu-BC-Ox8"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1VU-rg-f31"/>
+                    <connections>
+                        <outlet property="gameNumberLabel" destination="ti0-YT-PWZ" id="lEf-Jy-su4"/>
+                        <outlet property="kmNumberLabel" destination="MVw-RX-TZx" id="3gH-CS-2mK"/>
+                        <outlet property="totalMoneyLabel" destination="5h1-2g-b7V" id="TfD-fL-1yK"/>
+                        <outletCollection property="backgroundViews" destination="MVw-RX-TZx" collectionClass="NSMutableArray" id="ybp-9H-Jt2"/>
+                        <outletCollection property="backgroundViews" destination="5h1-2g-b7V" collectionClass="NSMutableArray" id="coa-7O-Hlj"/>
+                        <outletCollection property="backgroundViews" destination="ti0-YT-PWZ" collectionClass="NSMutableArray" id="rgA-5g-cKl"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDa-Rh-wJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1205" y="571"/>
+        </scene>
+        <!--CompletedEntries-->
+        <scene sceneID="iYX-hC-op6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompletedEntries" id="gl7-dO-e1X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbn-Xe-045" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692.5" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BadgerLogo" width="250" height="250"/>
+    </resources>
 </document>

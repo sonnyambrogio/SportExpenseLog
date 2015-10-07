@@ -33,8 +33,16 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+		<string>Bosox Full.ttf</string>
+		<string>Bosox Ouline Heavy.ttf</string>
+		<string>Bosox Outline.ttf</string>
+		<string>Bosox Revised.ttf</string>
+		<string>Bosox SemiBold.ttf</string>
+		<string>Bosox.ttf</string>
 	</array>
 </dict>
 </plist>

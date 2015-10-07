@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CKA-ze-Gv5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Add New ExpenseVC-->
+        <scene sceneID="Ci5-Xk-aSO">
+            <objects>
+                <viewController id="NmU-N2-Vwh" customClass="AddNewExpense_VC" customModule="SportExpenseLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bP0-na-H3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Tv-bM-imV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzR-8p-6wl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhK-HM-TGY">
+                                <rect key="frame" x="20" y="82" width="108" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expense Name:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pS-EW-fuB">
+                                <rect key="frame" x="136" y="78" width="272" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km Driven" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyR-lU-fqi">
+                                <rect key="frame" x="20" y="155" width="77" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km Driven" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4m-pR-t1s">
+                                <rect key="frame" x="105" y="151" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jt2-1Q-fSk">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="63a-wb-FE6">
+                            <connections>
+                                <action selector="cancelButton:" destination="NmU-N2-Vwh" id="G3E-l7-KQw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="fee-0e-wbj">
+                            <connections>
+                                <action selector="saveButton:" destination="NmU-N2-Vwh" id="MU8-f3-qmU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="expenseNameTextInput" destination="2pS-EW-fuB" id="mDm-nR-oth"/>
+                        <outlet property="kmDrivenTextInput" destination="r4m-pR-t1s" id="0dx-eb-oEB"/>
+                        <segue destination="lbI-9u-8AQ" kind="presentation" identifier="segueBackToList" id="UNg-J0-PBT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rq1-qk-bEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="489"/>
+        </scene>
+        <!--CompletedEntries-->
+        <scene sceneID="lhs-Hn-tCa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompletedEntries" id="lbI-9u-8AQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IU6-Xi-Pm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.5" y="273"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I6G-7M-xNR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CKA-ze-Gv5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cNE-ix-ApE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NmU-N2-Vwh" kind="relationship" relationship="rootViewController" id="QuP-80-I1i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCX-Gs-ylS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="489"/>
+        </scene>
+    </scenes>
+</document>

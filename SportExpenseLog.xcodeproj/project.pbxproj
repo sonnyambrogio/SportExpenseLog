@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		E008BD121BB616D400D2B688 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E008BD111BB616D400D2B688 /* AppDelegate.swift */; };
-		E008BD141BB616D400D2B688 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E008BD131BB616D400D2B688 /* ViewController.swift */; };
+		E008BD141BB616D400D2B688 /* ResultsDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E008BD131BB616D400D2B688 /* ResultsDisplayVC.swift */; };
 		E008BD171BB616D400D2B688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E008BD151BB616D400D2B688 /* Main.storyboard */; };
-		E008BD1A1BB616D400D2B688 /* SportExpenseLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E008BD181BB616D400D2B688 /* SportExpenseLog.xcdatamodeld */; };
 		E008BD1C1BB616D400D2B688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E008BD1B1BB616D400D2B688 /* Assets.xcassets */; };
 		E008BD1F1BB616D400D2B688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E008BD1D1BB616D400D2B688 /* LaunchScreen.storyboard */; };
+		E05387271BB9D1F9007F38A1 /* Bosox Full.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */; settings = {ASSET_TAGS = (); }; };
+		E05387281BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */; settings = {ASSET_TAGS = (); }; };
+		E05387291BB9D1F9007F38A1 /* Bosox Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */; settings = {ASSET_TAGS = (); }; };
+		E053872A1BB9D1F9007F38A1 /* Bosox Revised .ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387231BB9D1F9007F38A1 /* Bosox Revised .ttf */; settings = {ASSET_TAGS = (); }; };
+		E053872B1BB9D1F9007F38A1 /* Bosox SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387241BB9D1F9007F38A1 /* Bosox SemiBold.ttf */; settings = {ASSET_TAGS = (); }; };
+		E053872C1BB9D1F9007F38A1 /* Bosox.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387251BB9D1F9007F38A1 /* Bosox.ttf */; settings = {ASSET_TAGS = (); }; };
+		E053872D1BB9D1F9007F38A1 /* Bosox.txt in Resources */ = {isa = PBXBuildFile; fileRef = E05387261BB9D1F9007F38A1 /* Bosox.txt */; settings = {ASSET_TAGS = (); }; };
+		E0B080C41BC34669000F5058 /* CompletedEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */; settings = {ASSET_TAGS = (); }; };
+		E0B080C61BC3469C000F5058 /* CompletedEntries-TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */; settings = {ASSET_TAGS = (); }; };
+		E0B080CC1BC350C0000F5058 /* AddNewExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */; settings = {ASSET_TAGS = (); }; };
+		E0B080CE1BC350EC000F5058 /* AddNewExpense-VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */; settings = {ASSET_TAGS = (); }; };
+		E0C02E251BC488E700558AF0 /* SportExpenseLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E008BD0E1BB616D400D2B688 /* SportExpenseLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportExpenseLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E008BD111BB616D400D2B688 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E008BD131BB616D400D2B688 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E008BD131BB616D400D2B688 /* ResultsDisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDisplayVC.swift; sourceTree = "<group>"; };
 		E008BD161BB616D400D2B688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E008BD191BB616D400D2B688 /* SportExpenseLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportExpenseLog.xcdatamodel; sourceTree = "<group>"; };
 		E008BD1B1BB616D400D2B688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E008BD1E1BB616D400D2B688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E008BD201BB616D400D2B688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Full.ttf"; sourceTree = "<group>"; };
+		E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Outline Heavy.ttf"; sourceTree = "<group>"; };
+		E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Outline.ttf"; sourceTree = "<group>"; };
+		E05387231BB9D1F9007F38A1 /* Bosox Revised .ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Revised .ttf"; sourceTree = "<group>"; };
+		E05387241BB9D1F9007F38A1 /* Bosox SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox SemiBold.ttf"; sourceTree = "<group>"; };
+		E05387251BB9D1F9007F38A1 /* Bosox.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bosox.ttf; sourceTree = "<group>"; };
+		E05387261BB9D1F9007F38A1 /* Bosox.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bosox.txt; sourceTree = "<group>"; };
+		E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompletedEntries.storyboard; sourceTree = "<group>"; };
+		E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CompletedEntries-TVC.swift"; sourceTree = "<group>"; };
+		E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNewExpense.storyboard; sourceTree = "<group>"; };
+		E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewExpense-VC.swift"; sourceTree = "<group>"; };
+		E0C02E241BC488E700558AF0 /* SportExpenseLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportExpenseLog.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				E008BD101BB616D400D2B688 /* SportExpenseLog */,
+				E053872E1BB9D20B007F38A1 /* Resources */,
 				E008BD0F1BB616D400D2B688 /* Products */,
+				E008BD1D1BB616D400D2B688 /* LaunchScreen.storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,14 +80,73 @@
 		E008BD101BB616D400D2B688 /* SportExpenseLog */ = {
 			isa = PBXGroup;
 			children = (
-				E008BD111BB616D400D2B688 /* AppDelegate.swift */,
-				E008BD131BB616D400D2B688 /* ViewController.swift */,
-				E008BD151BB616D400D2B688 /* Main.storyboard */,
+				E04AF5A41BB88B9B00F265A8 /* Models */,
+				E04AF5A21BB88A5F00F265A8 /* Views */,
+				E04AF5A31BB88B6D00F265A8 /* Controllers */,
+				E04AF5A51BB88BE400F265A8 /* Data */,
 				E008BD1B1BB616D400D2B688 /* Assets.xcassets */,
-				E008BD1D1BB616D400D2B688 /* LaunchScreen.storyboard */,
-				E008BD201BB616D400D2B688 /* Info.plist */,
-				E008BD181BB616D400D2B688 /* SportExpenseLog.xcdatamodeld */,
+				E008BD111BB616D400D2B688 /* AppDelegate.swift */,
 			);
+			path = SportExpenseLog;
+			sourceTree = "<group>";
+		};
+		E04AF5A21BB88A5F00F265A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E008BD151BB616D400D2B688 /* Main.storyboard */,
+				E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */,
+				E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E04AF5A31BB88B6D00F265A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E008BD131BB616D400D2B688 /* ResultsDisplayVC.swift */,
+				E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */,
+				E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E04AF5A41BB88B9B00F265A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E04AF5A51BB88BE400F265A8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E008BD201BB616D400D2B688 /* Info.plist */,
+				E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E053871F1BB9D1F9007F38A1 /* lee-gordon_bosox */ = {
+			isa = PBXGroup;
+			children = (
+				E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */,
+				E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */,
+				E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */,
+				E05387231BB9D1F9007F38A1 /* Bosox Revised .ttf */,
+				E05387241BB9D1F9007F38A1 /* Bosox SemiBold.ttf */,
+				E05387251BB9D1F9007F38A1 /* Bosox.ttf */,
+				E05387261BB9D1F9007F38A1 /* Bosox.txt */,
+			);
+			name = "lee-gordon_bosox";
+			path = "../lee-gordon_bosox";
+			sourceTree = "<group>";
+		};
+		E053872E1BB9D20B007F38A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E053871F1BB9D1F9007F38A1 /* lee-gordon_bosox */,
+			);
+			name = Resources;
 			path = SportExpenseLog;
 			sourceTree = "<group>";
 		};
@@ -126,8 +209,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E008BD1F1BB616D400D2B688 /* LaunchScreen.storyboard in Resources */,
+				E05387281BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf in Resources */,
+				E0B080CC1BC350C0000F5058 /* AddNewExpense.storyboard in Resources */,
+				E053872D1BB9D1F9007F38A1 /* Bosox.txt in Resources */,
 				E008BD1C1BB616D400D2B688 /* Assets.xcassets in Resources */,
+				E053872A1BB9D1F9007F38A1 /* Bosox Revised .ttf in Resources */,
+				E053872B1BB9D1F9007F38A1 /* Bosox SemiBold.ttf in Resources */,
+				E053872C1BB9D1F9007F38A1 /* Bosox.ttf in Resources */,
+				E05387291BB9D1F9007F38A1 /* Bosox Outline.ttf in Resources */,
+				E0B080C41BC34669000F5058 /* CompletedEntries.storyboard in Resources */,
 				E008BD171BB616D400D2B688 /* Main.storyboard in Resources */,
+				E05387271BB9D1F9007F38A1 /* Bosox Full.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E008BD1A1BB616D400D2B688 /* SportExpenseLog.xcdatamodeld in Sources */,
-				E008BD141BB616D400D2B688 /* ViewController.swift in Sources */,
+				E008BD141BB616D400D2B688 /* ResultsDisplayVC.swift in Sources */,
+				E0B080C61BC3469C000F5058 /* CompletedEntries-TVC.swift in Sources */,
+				E0B080CE1BC350EC000F5058 /* AddNewExpense-VC.swift in Sources */,
+				E0C02E251BC488E700558AF0 /* SportExpenseLog.xcdatamodeld in Sources */,
 				E008BD121BB616D400D2B688 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +255,7 @@
 				E008BD1E1BB616D400D2B688 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = SportExpenseLog;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,16 +383,17 @@
 				E008BD251BB616D400D2B688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E008BD181BB616D400D2B688 /* SportExpenseLog.xcdatamodeld */ = {
+		E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E008BD191BB616D400D2B688 /* SportExpenseLog.xcdatamodel */,
+				E0C02E241BC488E700558AF0 /* SportExpenseLog.xcdatamodel */,
 			);
-			currentVersion = E008BD191BB616D400D2B688 /* SportExpenseLog.xcdatamodel */;
+			currentVersion = E0C02E241BC488E700558AF0 /* SportExpenseLog.xcdatamodel */;
 			path = SportExpenseLog.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
