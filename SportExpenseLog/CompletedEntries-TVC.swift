@@ -34,6 +34,7 @@ class CompletedEntries_TVC: UITableViewController {
         fetchCoreData()
         tableView.reloadData()
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,13 +69,20 @@ class CompletedEntries_TVC: UITableViewController {
         let expense = expenses[indexPath.row]
     
         // set the cell title text to match the text entered in the "AddNewExpense" Screen.
-        cell.textLabel?.text = expense.valueForKey("titleText") as? String
+        cell.textLabel?.text = String(expense.valueForKey("hotelCost")!)
+        
         cell.detailTextLabel?.text = String(expense.valueForKey("kmDriven")!)
         
+        // Style the text in the Cell
+        cell.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        cell.detailTextLabel?.font = UIFont.italicSystemFontOfSize(13)
         
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

@@ -12,33 +12,80 @@ import CoreData
 class AddNewExpense_VC: UIViewController {
     
     //MARK: - Variables
-    var expenses = [NSManagedObject]()
-
+    
+    var expenses = [NSManagedObject]()  // coredata managed object
+    var date = NSDate()
+    
+    
+    
     
     //MARK: - Outlets
     
-    @IBOutlet weak var expenseNameTextInput: UITextField!
-    @IBOutlet weak var kmDrivenTextInput: UITextField!
+    @IBOutlet weak var numOfGamesTextInput: UITextField!
+    @IBOutlet weak var gearInputTextField: UITextField!
+    @IBOutlet var kmInputTextField: [UITextField]!
+    @IBOutlet var foodInputTextField: [UITextField]!
+    @IBOutlet var hotelInputTextField: [UITextField]!
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var expenseTypeOutlet: UISegmentedControl!
+    @IBOutlet weak var kmDrivenStackView: UIStackView!
+    @IBOutlet weak var gearInfoStackView: UIStackView!
+    @IBOutlet weak var foodInfoStackView: UIStackView!
+    @IBOutlet weak var hotelInfoStackView: UIStackView!
+    @IBOutlet weak var tournyInfoStackView: UIStackView!
+
+    
+    // UserInput Outlets
+    @IBOutlet weak var HotelCostTextField: UITextField!
+    @IBOutlet weak var FoodCostTextField: UITextField!
+    @IBOutlet weak var NumberOfGamesTextField: UITextField!
+    @IBOutlet weak var kmDrivenTextField: UITextField!
+    @IBOutlet weak var equipmentCostTextField: UITextField!
     
 
+    
     //MARK: - Actions
+
+    @IBAction func expenseTypeSegmentedControl(sender: UISegmentedControl) {
+        presentProperStackBasedOnSegment()
+        
+    }
+    
     
     @IBAction func saveButton(sender: UIBarButtonItem) {
-       
+        // Save as an expense in coreData
         saveExpense()
+        print(date)
+        
+        // Segue back to the list when save function completes
         self.performSegueWithIdentifier("segueBackToList", sender: nil)
     }
     
+
     @IBAction func cancelButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    
+    
+    
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Fetch CoreData for appending new instances
         fetchCoreData()
-        // Do any additional setup after loading the view.
+
+        // set all stackViews as hidden(stay hidden until individual segmentes are selected.
+        hideAllStackViews()
+        
+        // the inital segment selected by default is the farthest Left, which happens to be
+        // the tounamentInfo input...So set the tournyInfo StackView to be visable
+        tournyInfoStackView.hidden = false
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +93,91 @@ class AddNewExpense_VC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: - Functions
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MARK: - Functions
+
+extension AddNewExpense_VC {
+    
+    func hideAllStackViews() {
+        tournyInfoStackView.hidden = true
+        hotelInfoStackView.hidden = true
+        foodInfoStackView.hidden = true
+        gearInfoStackView.hidden = true
+        kmDrivenStackView.hidden = true
+    }
+    
+    func presentProperStackBasedOnSegment() {
+        
+        // hide all stack views
+        hideAllStackViews()
+        
+        // show the proper StackView Based on segment selection..(Change to Switch Statement Later)
+        if expenseTypeOutlet.selectedSegmentIndex == 0 {
+            tournyInfoStackView.hidden = false
+        }
+        if expenseTypeOutlet.selectedSegmentIndex == 1 {
+            hotelInfoStackView.hidden = false
+            
+        }
+        if expenseTypeOutlet.selectedSegmentIndex == 2 {
+            foodInfoStackView.hidden = false
+            
+        }
+        if expenseTypeOutlet.selectedSegmentIndex == 3 {
+            gearInfoStackView.hidden = false
+            
+        }
+        if expenseTypeOutlet.selectedSegmentIndex == 4 {
+            kmDrivenStackView.hidden = false
+        }
+    }
+
+    
+    func keyboardWasShown(notification: NSNotification) {
+        var info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.bottomConstraint.constant = keyboardFrame.size.height + 20
+        })
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MARK:- CoreData Functions
+
+extension AddNewExpense_VC {
+    
     
     func saveExpense() {
         // 1
@@ -58,17 +189,23 @@ class AddNewExpense_VC: UIViewController {
         
         let _expense = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
-        let kmTextInputtoInt = Int(kmDrivenTextInput.text!)
+        
         
         
         // 3
-        _expense.setValue(expenseNameTextInput!.text, forKey: "titleText")
-        _expense.setValue(kmTextInputtoInt, forKey: "kmDriven")
+        
+        _expense.setValue(Int(FoodCostTextField.text!), forKey: "foodCost")
+        _expense.setValue(Int(HotelCostTextField.text!), forKey: "hotelCost")
+        _expense.setValue(Int(kmDrivenTextField.text!), forKey: "kmDriven")
+        _expense.setValue(Int(NumberOfGamesTextField.text!), forKey: "gamesAttended")
+        _expense.setValue(Int(equipmentCostTextField.text!), forKey: "equipmentCost")
+        
+        
         
         // 4
         do {
-             expenses.append(_expense)
-           try managedContext.save()
+            expenses.append(_expense)
+            try managedContext.save()
             print(expenses)
             
             // 5
@@ -78,6 +215,7 @@ class AddNewExpense_VC: UIViewController {
         }
     }
     
+
     func fetchCoreData() {
         let appDeleagte = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDeleagte.managedObjectContext
@@ -93,12 +231,36 @@ class AddNewExpense_VC: UIViewController {
             print("shit")
         }
     }
-    
-    
-    
-    
-    
-    
-    
 
+    
 }
+
+
+//MARK:- Alerts
+
+extension AddNewExpense_VC {
+    
+    func fillAllTextFieldsAlert() {
+        
+        let alert = UIAlertController(title: "Problem Detected", message: "Please Fill In All Text Fields", preferredStyle: .Alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        
+        alert.addAction(ok)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
