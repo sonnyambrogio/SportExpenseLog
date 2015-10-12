@@ -14,6 +14,7 @@ class CompletedEntries_TVC: UITableViewController {
     //MARK: - Variables
     var expenses = [NSManagedObject]()
     
+    var dateFormatter = NSDateFormatter()
     
     
     
@@ -33,6 +34,8 @@ class CompletedEntries_TVC: UITableViewController {
         super.viewDidLoad()
         fetchCoreData()
         tableView.reloadData()
+        navigationController?.navigationBar.tintColor = UIColor.badgerMaroon()
+        
         
         
     }
@@ -63,19 +66,42 @@ class CompletedEntries_TVC: UITableViewController {
     
     //MARK: - TableView Delgate
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         // get the "expense" from the "expenses Array"
         let expense = expenses[indexPath.row]
     
         // set the cell title text to match the text entered in the "AddNewExpense" Screen.
-        cell.textLabel?.text = String(expense.valueForKey("hotelCost")!)
+        cell.textLabel?.text = String(expense.valueForKey("titleValue")!)
         
-        cell.detailTextLabel?.text = String(expense.valueForKey("kmDriven")!)
+        // create a string to display in the detailedTextLabel
+        
+        
+        // create the detailed test String
+        let distance = expense.valueForKey("kmDriven") as! Double
+        let templitresPerKilometer = 0.075
+        let distanceExpese = (templitresPerKilometer * distance)
+        
+        let food = expense.valueForKey("foodCost") as! Double
+        let equipment = expense.valueForKey("equipmentCost") as! Double
+        let hotel = expense.valueForKey("hotelCost") as! Double
+        
+        let total = (distanceExpese + food + equipment + hotel)
+        
+        let detailedStringToDisplay = "Total Cost of This Entry: $\(Int(total))"
+        
+        print("\(distance)")
+        print("food \(food)")
+        print("equip \(equipment)")
+        print("hotel \(hotel)")
+        print("total \(total)")
+        print(detailedStringToDisplay)
+        cell.detailTextLabel?.text = detailedStringToDisplay
         
         // Style the text in the Cell
-        cell.textLabel?.font = UIFont.boldSystemFontOfSize(20)
-        cell.detailTextLabel?.font = UIFont.italicSystemFontOfSize(13)
+        
         
         return cell
     }
@@ -94,8 +120,8 @@ class CompletedEntries_TVC: UITableViewController {
             
             do {
                 try context.save()
-            } catch {
-                print("oops")
+            } catch let error as NSError {
+                print(error)
             }
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -125,8 +151,8 @@ class CompletedEntries_TVC: UITableViewController {
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
             expenses = results as! [NSManagedObject]
-        } catch {
-            print("shit")
+        } catch let error as NSError {
+            print(error)
         }
     }
 

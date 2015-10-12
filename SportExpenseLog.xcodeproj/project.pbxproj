@@ -113,6 +113,7 @@
 		E04AF5A41BB88B9B00F265A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -121,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				E008BD201BB616D400D2B688 /* Info.plist */,
-				E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */,
 			);
 			name = Data;
 			sourceTree = "<group>";

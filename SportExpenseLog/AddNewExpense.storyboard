@@ -51,10 +51,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gg0-cy-oog">
-                                <rect key="frame" x="20" y="145" width="560" height="29"/>
+                                <rect key="frame" x="20" y="145" width="560" height="57"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gg0-cy-oog" secondAttribute="height" multiplier="20:1" id="5IH-fF-ZHA"/>
+                                    <constraint firstAttribute="width" secondItem="Gg0-cy-oog" secondAttribute="height" multiplier="20:2" id="5IH-fF-ZHA"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Tourny"/>
@@ -68,17 +68,17 @@
                                     <action selector="expenseTypeSegmentedControl:" destination="NmU-N2-Vwh" eventType="valueChanged" id="zda-bE-P2i"/>
                                 </connections>
                             </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-lA-ybJ" userLabel="Hotel Info Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-lA-ybJ" userLabel="Hotel Info Stack View">
                                 <rect key="frame" x="248" y="275" width="104" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGA-x8-ze1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hotel Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGA-x8-ze1">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="19"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                         <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hotel Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4M-9v-sqv">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hotel Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4M-9v-sqv">
                                         <rect key="frame" x="0.0" y="19" width="104" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
@@ -87,18 +87,18 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="efS-1C-vaG" userLabel="Food Info Stack View">
-                                <rect key="frame" x="251.5" y="275" width="97.5" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="efS-1C-vaG" userLabel="Food Info Stack View">
+                                <rect key="frame" x="251" y="275" width="98" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-j6-zfd">
-                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-j6-zfd">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="19"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                         <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-qt-ohZ">
-                                        <rect key="frame" x="0.0" y="19" width="97.5" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-qt-ohZ">
+                                        <rect key="frame" x="0.0" y="19" width="98" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -110,18 +110,18 @@
                                     <constraint firstItem="ErE-qt-ohZ" firstAttribute="leading" secondItem="efS-1C-vaG" secondAttribute="leading" id="xxv-hf-Bx8"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-qw-8V3" userLabel="Gear Info Stack View">
-                                <rect key="frame" x="229" y="275" width="142.5" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-qw-8V3" userLabel="Gear Info Stack View">
+                                <rect key="frame" x="229" y="275" width="143" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onx-Lh-GGq">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Equipment Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onx-Lh-GGq">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="19"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                         <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-7n-DA8">
-                                        <rect key="frame" x="0.0" y="19" width="142.5" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-7n-DA8">
+                                        <rect key="frame" x="0.0" y="19" width="143" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -129,18 +129,18 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-B3-jMi" userLabel="kmDriven Info Stack View">
-                                <rect key="frame" x="253.5" y="275" width="93.5" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-B3-jMi" userLabel="kmDriven Info Stack View">
+                                <rect key="frame" x="253" y="275" width="94" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km Driven:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-X0-ApL">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="km Driven:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-X0-ApL">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="19"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                         <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-7l-uUK">
-                                        <rect key="frame" x="0.0" y="19" width="93.5" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-7l-uUK">
+                                        <rect key="frame" x="0.0" y="19" width="94" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -153,20 +153,20 @@
                                     <constraint firstItem="wfm-7l-uUK" firstAttribute="leading" secondItem="DYp-B3-jMi" secondAttribute="leading" id="cKI-jD-FL3"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" tag="100" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zro-F6-kWW" userLabel="Tourny Info Stack View">
+                            <stackView opaque="NO" tag="100" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zro-F6-kWW" userLabel="Tourny Info Stack View">
                                 <rect key="frame" x="178" y="213" width="245" height="241"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-VS-vDO" userLabel="Hotel Cost Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-VS-vDO" userLabel="Hotel Cost Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="245" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwV-dq-kpA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hotel Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwV-dq-kpA">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="19"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                                 <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hotel Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-pU-bn6">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hotel Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-pU-bn6">
                                                 <rect key="frame" x="0.0" y="19" width="245" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
@@ -175,17 +175,17 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-GZ-7Ma" userLabel="Food Cost Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-GZ-7Ma" userLabel="Food Cost Stack View">
                                         <rect key="frame" x="0.0" y="64" width="245" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBC-Xy-ugD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBC-Xy-ugD">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="19"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                                 <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-We-PsK">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-We-PsK">
                                                 <rect key="frame" x="0.0" y="19" width="245" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
@@ -198,17 +198,17 @@
                                             <constraint firstAttribute="trailing" secondItem="F2q-We-PsK" secondAttribute="trailing" id="TG5-0P-ZWS"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nHP-6c-5st" userLabel="km Driven Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nHP-6c-5st" userLabel="km Driven Stack View">
                                         <rect key="frame" x="0.0" y="128" width="245" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total km Driven:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xel-B8-F4b">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total km Driven:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xel-B8-F4b">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="19"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                                 <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km Driven" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uW2-7d-qVF">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km Driven" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uW2-7d-qVF">
                                                 <rect key="frame" x="0.0" y="19" width="245" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
@@ -217,17 +217,17 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-h6-mqf" userLabel="Number of Games Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-h6-mqf" userLabel="Number of Games Stack View">
                                         <rect key="frame" x="0.0" y="192" width="245" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Games Attended:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCp-hd-TJ4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number Of Games Attended:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCp-hd-TJ4">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="19"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="24"/>
                                                 <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Games" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-Xq-sUi">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Games" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-Xq-sUi">
                                                 <rect key="frame" x="0.0" y="19" width="245" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="BosoxFull" family="Bosox Full" pointSize="18"/>
@@ -256,6 +256,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Gg0-cy-oog" firstAttribute="top" secondItem="bP0-na-H3M" secondAttribute="bottom" constant="81" id="1YD-oG-cDA"/>
                             <constraint firstItem="Zro-F6-kWW" firstAttribute="top" secondItem="guT-et-uq5" secondAttribute="bottom" constant="84" id="27l-eH-Fkc"/>
@@ -275,6 +276,9 @@
                             <constraint firstItem="ANh-qw-8V3" firstAttribute="centerX" secondItem="fzR-8p-6wl" secondAttribute="centerX" id="wYS-2f-UX3"/>
                             <constraint firstItem="DYp-B3-jMi" firstAttribute="centerX" secondItem="fzR-8p-6wl" secondAttribute="centerX" id="xfi-VY-j9D"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oSQ-cK-CYi" appends="YES" id="BRS-KA-m9J"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jt2-1Q-fSk">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="63a-wb-FE6">
@@ -292,21 +296,23 @@
                         <outlet property="expenseTypeOutlet" destination="Gg0-cy-oog" id="If1-qm-AYA"/>
                         <outlet property="foodInfoStackView" destination="efS-1C-vaG" id="ow0-nd-0dU"/>
                         <outlet property="gearInfoStackView" destination="ANh-qw-8V3" id="ANa-dr-uiW"/>
-                        <outlet property="gearInputTextField" destination="OFZ-7n-DA8" id="ZcM-nT-ElS"/>
                         <outlet property="hotelInfoStackView" destination="GFT-lA-ybJ" id="0gN-F3-Ny0"/>
                         <outlet property="kmDrivenStackView" destination="DYp-B3-jMi" id="VHf-v9-R8R"/>
-                        <outlet property="numOfGamesTextInput" destination="Vr3-Xq-sUi" id="JPf-b0-p6n"/>
+                        <outlet property="standAloneEquipmentCostTextField" destination="OFZ-7n-DA8" id="5Ph-43-B34"/>
+                        <outlet property="standAloneFoodTextInput" destination="ErE-qt-ohZ" id="bCZ-oA-uVH"/>
+                        <outlet property="standAloneHotelTextInput" destination="x4M-9v-sqv" id="h2K-iU-MEa"/>
+                        <outlet property="standAloneKmTextInput" destination="wfm-7l-uUK" id="2Sq-au-ufe"/>
+                        <outlet property="tournyFoodTextField" destination="F2q-We-PsK" id="Vek-fl-zgI"/>
+                        <outlet property="tournyHotelTextField" destination="rUO-pU-bn6" id="jCU-kb-FjU"/>
                         <outlet property="tournyInfoStackView" destination="Zro-F6-kWW" id="0Hn-5D-gcx"/>
-                        <outletCollection property="kmInputTextField" destination="wfm-7l-uUK" collectionClass="NSMutableArray" id="dCF-L6-2K9"/>
-                        <outletCollection property="kmInputTextField" destination="uW2-7d-qVF" collectionClass="NSMutableArray" id="9ia-fr-eHO"/>
-                        <outletCollection property="foodInputTextField" destination="ErE-qt-ohZ" collectionClass="NSMutableArray" id="c3q-VK-zG2"/>
-                        <outletCollection property="foodInputTextField" destination="F2q-We-PsK" collectionClass="NSMutableArray" id="QqG-FF-TbL"/>
-                        <outletCollection property="hotelInputTextField" destination="x4M-9v-sqv" collectionClass="NSMutableArray" id="ziQ-dz-OU5"/>
-                        <outletCollection property="hotelInputTextField" destination="rUO-pU-bn6" collectionClass="NSMutableArray" id="EP8-xn-13U"/>
+                        <outlet property="tournyKmTextField" destination="uW2-7d-qVF" id="0v9-kn-D3c"/>
+                        <outlet property="tournyNumGamesTextField" destination="Vr3-Xq-sUi" id="PiJ-OQ-oO4"/>
                         <segue destination="lbI-9u-8AQ" kind="presentation" identifier="segueBackToList" id="UNg-J0-PBT"/>
+                        <segue destination="JIp-5c-Nft" kind="presentation" identifier="segueToMain" id="tSJ-1N-tvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq1-qk-bEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oSQ-cK-CYi"/>
             </objects>
             <point key="canvasLocation" x="1244" y="489"/>
         </scene>
@@ -317,6 +323,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IU6-Xi-Pm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1872.5" y="273"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="hSa-wp-1pb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="JIp-5c-Nft" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uq-tT-emr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="661"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I6G-7M-xNR">

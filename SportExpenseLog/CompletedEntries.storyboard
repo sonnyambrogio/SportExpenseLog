@@ -3,6 +3,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Bosox Revised .ttf">
+            <string>BosoxRevised</string>
+            <string>BosoxRevised</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Completed EntriesTVC-->
         <scene sceneID="DHd-hb-TOW">
@@ -14,27 +20,27 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="7t6-dj-FGV" detailTextLabel="3uu-X3-Tw6" style="IBUITableViewCellStyleSubtitle" id="gjT-hC-Gjr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="7t6-dj-FGV" detailTextLabel="3uu-X3-Tw6" style="IBUITableViewCellStyleSubtitle" id="gjT-hC-Gjr">
                                 <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gjT-hC-Gjr" id="mbQ-8x-PzE">
-                                    <rect key="frame" x="0.0" y="0.0" width="553" height="64.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7t6-dj-FGV">
-                                            <rect key="frame" x="15" y="16" width="31.5" height="19.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7t6-dj-FGV">
+                                            <rect key="frame" x="15" y="16" width="44.5" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="25"/>
+                                            <color key="textColor" cyan="0.25850118" magenta="1" yellow="0.79712609850000005" black="0.0010070800779999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3uu-X3-Tw6">
-                                            <rect key="frame" x="15" y="35.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="15" y="36" width="48.5" height="13"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="BosoxRevised" family="Bosox" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -52,10 +58,10 @@
                         <barButtonItem key="leftBarButtonItem" title="Home" id="X89-Bc-FYl">
                             <connections>
                                 <action selector="BackButton:" destination="zYL-6j-mTH" id="KuB-ff-qij"/>
-                                <segue destination="gH3-5O-4hl" kind="unwind" unwindAction="unwindToResultsDisplayVC:" id="7hI-wI-eIU"/>
+                                <segue destination="gH3-5O-4hl" kind="unwind" identifier="backToMainScreen" unwindAction="unwindToResultsDisplayVC:" id="7hI-wI-eIU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Bjl-nw-NbG">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Bjl-nw-NbG">
                             <connections>
                                 <segue destination="BOR-KP-fm5" kind="presentation" identifier="segueToAddNewExpense" id="QKZ-tU-0Nt"/>
                             </connections>
@@ -65,7 +71,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5B-UM-EwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gH3-5O-4hl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="114"/>
+            <point key="canvasLocation" x="1645" y="92"/>
         </scene>
         <!--AddNewExpense-->
         <scene sceneID="LUz-gD-XkJ">
