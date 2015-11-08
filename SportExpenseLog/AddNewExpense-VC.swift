@@ -14,7 +14,7 @@ class AddNewExpense_VC: UIViewController {
     //MARK: - Variables
     
     var expenses = [NSManagedObject]()  // coredata managed object
-    var nsDate = NSDateFormatter()
+    var nsDate = NSDate()
 
     var hotelValueToSave: Int?
     var foodValueToSave: Int?
@@ -31,6 +31,7 @@ class AddNewExpense_VC: UIViewController {
 
     
     
+    @IBOutlet var imageView: UIView!
     @IBOutlet weak var expenseTypeOutlet: UISegmentedControl!
     @IBOutlet weak var kmDrivenStackView: UIStackView!
     @IBOutlet weak var gearInfoStackView: UIStackView!
@@ -76,6 +77,7 @@ class AddNewExpense_VC: UIViewController {
         if guardFailed == false {
         // Save as an expense in coreData
         saveExpense()
+        makePDF()
         }
         
         // Segue back to the list when save function completes
@@ -142,14 +144,6 @@ class AddNewExpense_VC: UIViewController {
 
 
 
-
-
-
-
-
-
-
-
 //MARK: - StackView Handling
 
 extension AddNewExpense_VC {
@@ -167,7 +161,7 @@ extension AddNewExpense_VC {
         // Initialy hide all stack views
         hideAllStackViews()
         
-        // show the proper StackView Based on segment selection..(Change to Switch Statement Later)
+        // show the proper StackView Based on segment selection..(Change to Switch Statement Later?)
         if expenseTypeOutlet.selectedSegmentIndex == 0 {
             tournyInfoStackView.hidden = false
         }
@@ -222,7 +216,7 @@ extension AddNewExpense_VC {
         _expense.setValue(nsDate, forKey: "date")
         _expense.setValue(titleValueToSave, forKey: "titleValue")
         
-        // 4 - Saving the setValues ans an "expense"
+        // 4 - Saving the setValues as an "expense"
         do {
             expenses.append(_expense)
             try managedContext.save()
@@ -262,9 +256,34 @@ extension AddNewExpense_VC {
     
     func fillAllTextFieldsAlert() {
         
-        let alert = UIAlertController(title: "Problem Detected", message: "Please Fill In All Text Fields", preferredStyle: .Alert)
+        // Blur the background while the displayAlert is up
+        let normalView = imageView
+        let blurStyle = UIBlurEffect(style: .Light)
         
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let blurView = UIVisualEffectView(effect: blurStyle)
+        blurView.frame = normalView.bounds
+
+        normalView.addSubview(blurView)
+        
+        var message: String?
+            if self.expenseTypeOutlet.selectedSegmentIndex == 0 {
+                message = "Please Fill in all Text Fields"
+            } else {
+                message = "Please fill in the Text Field"
+            }
+      
+        
+        let alert = UIAlertController(title: "Problem Detected", message: message, preferredStyle: .Alert)
+        
+        
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: { Action in
+            // animate the removal of the blur view...without this animation, the removal is choppy and androidy 😖
+            // This visualy looks good, but it is producing a warning in the log
+            UIView.animateWithDuration(0.3, animations:  {
+                blurView.alpha = 0.0
+                normalView.alpha = 1.0
+                })
+        })
         
         alert.addAction(ok)
         
@@ -277,6 +296,37 @@ extension AddNewExpense_VC {
 //MARK:- General Functions
 
 extension AddNewExpense_VC {
+    
+    // Create PDF of page fr testing
+    func makePDF() {
+        let priorBounds:CGRect = self.imageView.bounds;
+        
+        let fittedSize:CGSize = self.imageView.sizeThatFits(CGSizeMake(priorBounds.size.width, priorBounds.size.height))
+        self.imageView.bounds = CGRectMake(0, 0, fittedSize.width, fittedSize.height);
+        
+        let pdfPageBounds:CGRect = CGRectMake(0, 0, 792, 612); // Change this as your need
+        let pdfData = NSMutableData()
+        
+        UIGraphicsBeginPDFContextToData(pdfData, pdfPageBounds, nil)
+        
+        for var pageOriginY:CGFloat = 0; pageOriginY < fittedSize.height; pageOriginY += pdfPageBounds.size.height {
+            
+            UIGraphicsBeginPDFPageWithInfo(pdfPageBounds, nil);
+            CGContextSaveGState(UIGraphicsGetCurrentContext());
+            CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0, -pageOriginY)
+            self.imageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        }
+        
+        UIGraphicsEndPDFContext();
+        
+        self.imageView.bounds = priorBounds; // Reset the tableView
+        
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let pdfFileName = path.stringByAppendingPathComponent("testfilewnew.pdf")
+        print("\(pdfFileName)")
+        
+        pdfData.writeToFile(pdfFileName, atomically: true)
+    }
     
     // tapGestureRecogniser
     func registerTap() {
@@ -390,3 +440,4 @@ extension AddNewExpense_VC {
         }
     }
 }
+

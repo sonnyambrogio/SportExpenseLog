@@ -12,18 +12,22 @@
 		E008BD171BB616D400D2B688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E008BD151BB616D400D2B688 /* Main.storyboard */; };
 		E008BD1C1BB616D400D2B688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E008BD1B1BB616D400D2B688 /* Assets.xcassets */; };
 		E008BD1F1BB616D400D2B688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E008BD1D1BB616D400D2B688 /* LaunchScreen.storyboard */; };
-		E05387271BB9D1F9007F38A1 /* Bosox Full.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */; settings = {ASSET_TAGS = (); }; };
-		E05387281BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */; settings = {ASSET_TAGS = (); }; };
-		E05387291BB9D1F9007F38A1 /* Bosox Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */; settings = {ASSET_TAGS = (); }; };
-		E053872A1BB9D1F9007F38A1 /* Bosox Revised .ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387231BB9D1F9007F38A1 /* Bosox Revised .ttf */; settings = {ASSET_TAGS = (); }; };
-		E053872B1BB9D1F9007F38A1 /* Bosox SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387241BB9D1F9007F38A1 /* Bosox SemiBold.ttf */; settings = {ASSET_TAGS = (); }; };
-		E053872C1BB9D1F9007F38A1 /* Bosox.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387251BB9D1F9007F38A1 /* Bosox.ttf */; settings = {ASSET_TAGS = (); }; };
-		E053872D1BB9D1F9007F38A1 /* Bosox.txt in Resources */ = {isa = PBXBuildFile; fileRef = E05387261BB9D1F9007F38A1 /* Bosox.txt */; settings = {ASSET_TAGS = (); }; };
-		E0B080C41BC34669000F5058 /* CompletedEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E0B080C61BC3469C000F5058 /* CompletedEntries-TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */; settings = {ASSET_TAGS = (); }; };
-		E0B080CC1BC350C0000F5058 /* AddNewExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E0B080CE1BC350EC000F5058 /* AddNewExpense-VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */; settings = {ASSET_TAGS = (); }; };
-		E0C02E251BC488E700558AF0 /* SportExpenseLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		E011DB431BDD86C000CCFC0C /* ExpeseDetail-VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011DB421BDD86C000CCFC0C /* ExpeseDetail-VC.swift */; };
+		E011DB451BDD875700CCFC0C /* ExpenseDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E011DB441BDD875700CCFC0C /* ExpenseDetail.storyboard */; };
+		E05387271BB9D1F9007F38A1 /* Bosox Full.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */; };
+		E05387281BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */; };
+		E05387291BB9D1F9007F38A1 /* Bosox Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */; };
+		E053872A1BB9D1F9007F38A1 /* Bosox Revised .ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387231BB9D1F9007F38A1 /* Bosox Revised .ttf */; };
+		E053872B1BB9D1F9007F38A1 /* Bosox SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387241BB9D1F9007F38A1 /* Bosox SemiBold.ttf */; };
+		E053872C1BB9D1F9007F38A1 /* Bosox.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05387251BB9D1F9007F38A1 /* Bosox.ttf */; };
+		E053872D1BB9D1F9007F38A1 /* Bosox.txt in Resources */ = {isa = PBXBuildFile; fileRef = E05387261BB9D1F9007F38A1 /* Bosox.txt */; };
+		E0B080C41BC34669000F5058 /* CompletedEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */; };
+		E0B080C61BC3469C000F5058 /* CompletedEntries-TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */; };
+		E0B080CC1BC350C0000F5058 /* AddNewExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */; };
+		E0B080CE1BC350EC000F5058 /* AddNewExpense-VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */; };
+		E0BDDDAF1BCDD7690066C512 /* Expense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BDDDAD1BCDD7690066C512 /* Expense+CoreDataProperties.swift */; };
+		E0BDDDB01BCDD7690066C512 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BDDDAE1BCDD7690066C512 /* Expense.swift */; };
+		E0C02E251BC488E700558AF0 /* SportExpenseLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0C02E231BC488E700558AF0 /* SportExpenseLog.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,8 @@
 		E008BD1B1BB616D400D2B688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E008BD1E1BB616D400D2B688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E008BD201BB616D400D2B688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E011DB421BDD86C000CCFC0C /* ExpeseDetail-VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpeseDetail-VC.swift"; sourceTree = "<group>"; };
+		E011DB441BDD875700CCFC0C /* ExpenseDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExpenseDetail.storyboard; sourceTree = "<group>"; };
 		E05387201BB9D1F9007F38A1 /* Bosox Full.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Full.ttf"; sourceTree = "<group>"; };
 		E05387211BB9D1F9007F38A1 /* Bosox Outline Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Outline Heavy.ttf"; sourceTree = "<group>"; };
 		E05387221BB9D1F9007F38A1 /* Bosox Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bosox Outline.ttf"; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CompletedEntries-TVC.swift"; sourceTree = "<group>"; };
 		E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNewExpense.storyboard; sourceTree = "<group>"; };
 		E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewExpense-VC.swift"; sourceTree = "<group>"; };
+		E0BDDDAD1BCDD7690066C512 /* Expense+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E0BDDDAE1BCDD7690066C512 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E0C02E241BC488E700558AF0 /* SportExpenseLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportExpenseLog.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +70,8 @@
 		E008BD051BB616D400D2B688 = {
 			isa = PBXGroup;
 			children = (
+				E0BDDDAD1BCDD7690066C512 /* Expense+CoreDataProperties.swift */,
+				E0BDDDAE1BCDD7690066C512 /* Expense.swift */,
 				E008BD101BB616D400D2B688 /* SportExpenseLog */,
 				E053872E1BB9D20B007F38A1 /* Resources */,
 				E008BD0F1BB616D400D2B688 /* Products */,
@@ -94,8 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				E008BD151BB616D400D2B688 /* Main.storyboard */,
-				E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */,
 				E0B080CB1BC350C0000F5058 /* AddNewExpense.storyboard */,
+				E0B080C31BC34669000F5058 /* CompletedEntries.storyboard */,
+				E011DB441BDD875700CCFC0C /* ExpenseDetail.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -104,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				E008BD131BB616D400D2B688 /* ResultsDisplayVC.swift */,
-				E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */,
 				E0B080CD1BC350EC000F5058 /* AddNewExpense-VC.swift */,
+				E0B080C51BC3469C000F5058 /* CompletedEntries-TVC.swift */,
+				E011DB421BDD86C000CCFC0C /* ExpeseDetail-VC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 				E053872B1BB9D1F9007F38A1 /* Bosox SemiBold.ttf in Resources */,
 				E053872C1BB9D1F9007F38A1 /* Bosox.ttf in Resources */,
 				E05387291BB9D1F9007F38A1 /* Bosox Outline.ttf in Resources */,
+				E011DB451BDD875700CCFC0C /* ExpenseDetail.storyboard in Resources */,
 				E0B080C41BC34669000F5058 /* CompletedEntries.storyboard in Resources */,
 				E008BD171BB616D400D2B688 /* Main.storyboard in Resources */,
 				E05387271BB9D1F9007F38A1 /* Bosox Full.ttf in Resources */,
@@ -230,8 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0BDDDB01BCDD7690066C512 /* Expense.swift in Sources */,
 				E008BD141BB616D400D2B688 /* ResultsDisplayVC.swift in Sources */,
 				E0B080C61BC3469C000F5058 /* CompletedEntries-TVC.swift in Sources */,
+				E011DB431BDD86C000CCFC0C /* ExpeseDetail-VC.swift in Sources */,
+				E0BDDDAF1BCDD7690066C512 /* Expense+CoreDataProperties.swift in Sources */,
 				E0B080CE1BC350EC000F5058 /* AddNewExpense-VC.swift in Sources */,
 				E0C02E251BC488E700558AF0 /* SportExpenseLog.xcdatamodeld in Sources */,
 				E008BD121BB616D400D2B688 /* AppDelegate.swift in Sources */,
